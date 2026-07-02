@@ -1,0 +1,45 @@
+name: kavita
+description: "A quiet place for poems, in two tongues."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Cupertino-style icons used by the Flutter starter — we won't rely on this
+  # much, but it's safe to leave in.
+  cupertino_icons: ^1.0.6
+
+  # Lets us use real Google fonts (Newsreader, Tiro Devanagari Hindi,
+  # Instrument Sans) without manually downloading .ttf files and wiring
+  # them into pubspec.yaml ourselves. It downloads+caches them at runtime.
+  google_fonts: ^6.2.1
+
+  # Simple local key-value storage — good enough for saving drafts on-device
+  # before you wire up a real backend.
+  shared_preferences: ^2.2.3
+
+  # State management. Riverpod lets different screens (feed, drafts, writer)
+  # share the same in-memory list of poems without passing data through
+  # dozens of constructors. More on this below in the README.
+  flutter_riverpod: ^2.5.1
+
+  # For a later step: audio recording + playback for the Record screen.
+  # (Left in as a dependency now so the project structure is ready for it;
+  # the Record screen UI in this build is functional but the actual
+  # microphone wiring is stubbed — see README "Next steps".)
+  record: ^5.1.2
+  just_audio: ^0.9.40
+  audio_waveforms: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
